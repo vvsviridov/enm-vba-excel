@@ -26,7 +26,7 @@ End Sub
 ''' PUBLIC FUNCTIONS '''
 
 Public Sub login(ByVal baseUrl, ByVal login, ByVal password As String)
-  authEndpoint = baseUrl & "/login?IDToken1=" & login & "&IDToken2=" & password
+  authEndpoint = baseUrl & "/login?IDToken1=" & login & "&IDToken2=" & WorksheetFunction.EncodeURL(password)
   exitEndpoint = baseUrl & "/logout"
   applEndpoint = baseUrl & "/configuration-tasks/v1/tasks"
   With oServerXmlHttp
