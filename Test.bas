@@ -34,7 +34,7 @@ Sub Rest_Execution()
     With oEnmRest
         .login baseUrl, login, password
         payLoad = "{""name"": ""readCells"",""fdn"": ""NetworkElement=BSC1""}"
-        response = .execute(rest_body)
+        response = .execute(payLoad)
         .logout
     End With
 	
